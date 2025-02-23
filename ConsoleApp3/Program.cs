@@ -31,7 +31,7 @@ class Program
                 Console.WriteLine("5. Valyuta almashtirish");
                 Console.WriteLine();
                 Console.WriteLine("6. Bankomatda bor pulni bilish");
-                Console.WriteLine();    
+                Console.WriteLine();
                 Console.WriteLine("7. Chiqish");
                 Console.WriteLine();
                 Console.Write("Tanlang: ");
@@ -165,7 +165,7 @@ class Program
                         }
                     }
                 }
-                else if(tanlang == 6)
+                else if (tanlang == 6)
                 {
                     Console.WriteLine($"Bankomatda qolgan pul miqdori: {bankomatBalansi}");
                     Console.WriteLine();
@@ -182,22 +182,25 @@ class Program
                         break;
                     }
                     else if (tanlang == 7)
-                {
-                    Console.WriteLine("Xizmatdan foydalanish uchun rahmat !");
-                    break;
-                }
+                    {
+                        Console.WriteLine("Xizmatdan foydalanish uchun rahmat !");
+                        break;
+                    }
 
+                }else if (kod != kod1)
+
+                Console.WriteLine("Kod noto`g`ri kiritildi");
+                Console.WriteLine();
+                Console.WriteLine("Qaytadan urinib ko`ring");
+                Console.WriteLine();
+                Console.WriteLine();
             }
-        }
-        else if (kod != kod1)
-        {
-            Console.WriteLine("Kod noto`g`ri kiritildi");
-            Console.WriteLine();
-            Console.WriteLine("Qaytadan urinib ko`ring");
-            Console.WriteLine();
-            Console.WriteLine();
 
         }
-
+        
     }
+
+        
+
+    
 }
