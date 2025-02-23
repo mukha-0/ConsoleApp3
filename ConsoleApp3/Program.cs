@@ -1,15 +1,24 @@
-﻿int yigindi(int x)
+﻿using ConsoleApp3;
+
+public class Program
 {
-    if (100 > x || x > 999)
+    static void Main(string[] args)
     {
-        int yuz = x / 100;
-        int on = x % 100 / 10;
-        int bir = x % 100 % 10 / 1;
-        return yuz + on + bir;
+
+        string[] arguments = { "Sardor", "Muhammadbek", "Aziz" };
+        string[] arguments2 = { "150$", "250$", "350.000$ (For Porsche GT3 RS)" };
+        Main2(arguments, arguments2);
+
+    }
+
+
+    public static void Main2(string[] names, string[] arguments2)
+    {
+        int res = 0;
+        foreach (string name in names)
+        {
+            Console.WriteLine(name + " " + arguments2[res]);
+            res++;
+        }
     }
 }
-
-Console.WriteLine("Son: ");
-string input = Console.ReadLine();
-var natija = int.Parse(input);
-Console.WriteLine(yigindi(natija));
