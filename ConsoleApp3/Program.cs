@@ -1,837 +1,185 @@
 ﻿using System;
-using System.Reflection.Metadata.Ecma335;
 
 class Program
 {
     static void Main()
     {
-        string login1 = "Ali";
-        string parol1 = "Ali0930";
-        string book1 = "A Dictionary of the English Language";
-        string book2 = "Ducks, Newburyport";
-        string book3 = "2666";
-        string book4 = "The Count of Monte Cristo";
-        string book5 = "Harry Potter and the Philosopher's Stone";
-        string book6 = "And then There Were None";
-        Console.WriteLine("                                      ONLINE KUTUBXONAGA HUSH KELIBSIZ");
-        Console.WriteLine("Oldin royxatdan o`tganmisiz?");
+
+        Console.WriteLine("Bankomatga hush kelibsiz !");
         Console.WriteLine();
-        Console.WriteLine("1. Tizimga kirish");
-        Console.WriteLine("2. Ro'yxatdan o'tish");
-        int a = int.Parse(Console.ReadLine());
+        Console.Write("Kodni kiriting: ");
+        int kod = 9232;
+        double kartaBalansi = 15000000;
+        int bankomatBalansi = 1000000000;
+        int number = 997507128;
+        int kod1 = int.Parse(Console.ReadLine());
         Console.Clear();
-        if (a == 1)
+        if (kod == kod1)
         {
-            Console.Write("Login: ");
-            string login = Console.ReadLine();
-            Console.Write("Parol: ");
-            string parol = Console.ReadLine();
-            while (login == login1 && parol == parol1)
+            while (true)
             {
+                Console.WriteLine("Bo`limni tanlang");
+                Console.WriteLine();
+                Console.WriteLine("1. Pul olish");
+                Console.WriteLine();
+                Console.WriteLine("2. Karta balansi");
+                Console.WriteLine();
+                Console.WriteLine("3. Telefon raqamga sms xabarnoma ulash");
+                Console.WriteLine();
+                Console.WriteLine("4. Karta kodini o`zgartirish");
+                Console.WriteLine();
+                Console.WriteLine("5. Valyuta almashtirish");
+                Console.WriteLine();
+                Console.WriteLine("6. Chiqish");
+                Console.WriteLine();
+                Console.Write("Tanlang: ");
+                int tanlang = int.Parse(Console.ReadLine());
                 Console.Clear();
-                Console.WriteLine("Tizimga hush kelibsiz !");
-                Console.WriteLine("Bolimni tanlang...");
-                Console.WriteLine("1. Kitob buyurtma qilish");
-                Console.WriteLine("2. Kitob qo`shish");
-                Console.WriteLine("3. Kitoblar haqida malumot");
-                Console.WriteLine("4. Chiqish");
-                int bolim = int.Parse(Console.ReadLine());
-                Console.Clear();
-                if (bolim == 3)
+                if (tanlang == 1)
                 {
-                    Console.WriteLine("Book1 = A Dictionary of the English Language");
-                    Console.WriteLine("Book2 = Ducks, Newburyport");
-                    Console.WriteLine("Book3 = 2666");
-                    Console.WriteLine("Book4 = The Count of Monte Cristo");
-                    Console.WriteLine("Book5 = Harry Potter and the Philosopher's Stone");
-                    Console.WriteLine("Book6 = And then There Were None");
-                    Console.Write("Batafsil ma'lumor olish uchun Tanlang: ");
-                    string choice = Console.ReadLine();
+                    Console.WriteLine("Pul miqdorini kiriting: ");
+                    int pul = int.Parse(Console.ReadLine());
                     Console.Clear();
-                    if (choice == "Book1")
+
+                    kartaBalansi = kartaBalansi - pul;
+                    bankomatBalansi = bankomatBalansi - pul;
+                    Console.WriteLine("Marxamat pulni olishingiz mumkun");
+                    Console.WriteLine("Qoldiq balans: " + kartaBalansi);
+                    Console.Clear();
+                    Console.WriteLine("Boshqa amal bajarasizmi ?    1-Ha.  2-Yoq ");
+                    int amal = int.Parse(Console.ReadLine());
+                    if (amal == 1)
                     {
-                        Console.WriteLine("              A Dictionary of the English Language");
-                        Console.WriteLine("Language -> English");
-                        Console.WriteLine("Author -> Samuel Johnson");
-                        Console.WriteLine("Pages -> 2348");
-                        Console.WriteLine("Year -> 1755");
-                        Console.WriteLine("Price -> 30$");
-                        Console.WriteLine();
-                        Console.WriteLine("1. Ortga qaytish");
-                        Console.WriteLine("2. Boshqa amal bajarmayman");
-                        int amal = int.Parse(Console.ReadLine());
                         Console.Clear();
-                        if (amal == 1)
-                        {
-                            continue;
-                        }
-                        else if (amal == 2)
-                        {
-                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                            break;
-                        }
+                        continue;
                     }
-                    else if (choice == "Book2")
+                    else if (amal == 2)
                     {
-                        Console.WriteLine("                 Ducks, Newburyport");
-                        Console.WriteLine("Language -> English");
-                        Console.WriteLine("Author -> Lucy Ellmann");
-                        Console.WriteLine("Pages -> 1030");
-                        Console.WriteLine("Year -> 2019");
-                        Console.WriteLine("Price -> 20$");
-                        Console.WriteLine();
-                        Console.WriteLine("1. Ortga qaytish");
-                        Console.WriteLine("2. Boshqa amal bajarmayman");
-                        int amal = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        if (amal == 1)
-                        {
-                            continue;
-                        }
-                        else if (amal == 2)
-                        {
-                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                            break;
-                        }
-                    }
-                    else if (choice == "Book3")
-                    {
-                        Console.WriteLine("              2666");
-                        Console.WriteLine("Language -> English");
-                        Console.WriteLine("Author -> Roberto Bolano");
-                        Console.WriteLine("Pages -> 1100");
-                        Console.WriteLine("Year -> 2004");
-                        Console.WriteLine("Price -> 25$");
-                        Console.WriteLine();
-                        Console.WriteLine("1. Ortga qaytish");
-                        Console.WriteLine("2. Boshqa amal bajarmayman");
-                        int amal = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        if (amal == 1)
-                        {
-                            continue;
-                        }
-                        else if (amal == 2)
-                        {
-                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                            break;
-                        }
-                    }
-                    else if (choice == "Book4")
-                    {
-                        Console.WriteLine("              The Count of Monte Cristo");
-                        Console.WriteLine("Language -> English");
-                        Console.WriteLine("Author -> Alexandre Dumas");
-                        Console.WriteLine("Pages -> 1276");
-                        Console.WriteLine("Year -> 1844");
-                        Console.WriteLine("Price -> 15$");
-                        Console.WriteLine();
-                        Console.WriteLine("1. Ortga qaytish");
-                        Console.WriteLine("2. Boshqa amal bajarmayman");
-                        int amal = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        if (amal == 1)
-                        {
-                            continue;
-                        }
-                        else if (amal == 2)
-                        {
-                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                            break;
-                        }
-                    }
-                    else if (choice == "Book5")
-                    {
-                        Console.WriteLine("              Harry Potter and the Philosopher's Stone");
-                        Console.WriteLine("Language -> English");
-                        Console.WriteLine("Author -> J.K. Rowling");
-                        Console.WriteLine("Pages -> 223");
-                        Console.WriteLine("Year -> 1997");
-                        Console.WriteLine("Price -> 10$");
-                        Console.WriteLine();
-                        Console.WriteLine("1. Ortga qaytish");
-                        Console.WriteLine("2. Boshqa amal bajarmayman");
-                        int amal = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        if (amal == 1)
-                        {
-                            continue;
-                        }
-                        else if (amal == 2)
-                        {
-                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                            break;
-                        }
-                    }
-                    else if (choice == "Book6")
-                    {
-                        Console.WriteLine("              And then There Were None");
-                        Console.WriteLine("Language -> English");
-                        Console.WriteLine("Author -> Agatha Christie");
-                        Console.WriteLine("Pages -> 272");
-                        Console.WriteLine("Year -> 1939");
-                        Console.WriteLine("Price -> 10$");
-                        Console.WriteLine();
-                        Console.WriteLine("1. Ortga qaytish");
-                        Console.WriteLine("2. Boshqa amal bajarmayman");
-                        int amal = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        if (amal == 1)
-                        {
-                            continue;
-                        }
-                        else if (amal == 2)
-                        {
-                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                            break;
-                        }
+                        Console.WriteLine("Xizmatdan foydalanish uchun rahmat !");
+                        break;
                     }
                 }
-                else if (bolim == 1)
+                else if (tanlang == 2)
                 {
-                    Console.Write("Qaysi kitobdan buyurtma bermoqchisiz ( Masalan -> book1 ) : ");
-                    string order = Console.ReadLine();
-                    if (order == "book1")
+                    Console.WriteLine($"Balans: {kartaBalansi}");
+                    Console.WriteLine("Boshqa amal bajarasizmi ?    1-Ha.  2-Yoq ");
+                    int amal = int.Parse(Console.ReadLine());
+                    if (amal == 1)
                     {
-                        Console.WriteLine(book1);
-                        Console.WriteLine("Kitob soni: ");
-                        int numb = int.Parse(Console.ReadLine());
                         Console.Clear();
-                        Console.Write("Manzilingizni kiriting: ");
-                        string manzil = Console.ReadLine();
-                        Console.Clear();
-                        Console.WriteLine($"Sizning {numb} ta {book1} kitobingiz 2-3 kun ichida yetkazib beriladi.");
-                        Console.WriteLine();
-                        Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
-                        Console.WriteLine();
-                        Console.WriteLine("1. Ortga qaytish");
-                        Console.WriteLine("2. Boshqa amal bajarmayman");
-                        int amal = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        if (amal == 1)
-                        {
-                            continue;
-                        }
-                        else if (amal == 2)
-                        {
-                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                            break;
-                        }
+                        continue;
                     }
-                    else if (order == "book2")
+                    else if (amal == 2)
                     {
-                        Console.WriteLine(book2);
-                        Console.WriteLine("Kitob soni: ");
-                        int numb = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        Console.Write("Manzilingizni kiriting: ");
-                        string manzil = Console.ReadLine();
-                        Console.Clear();
-                        Console.WriteLine($"Sizning {numb} ta {book2} kitobingiz 2-3 kun ichida yetkazib beriladi.");
-                        Console.WriteLine();
-                        Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
-                        Console.WriteLine();
-                        Console.WriteLine("1. Ortga qaytish");
-                        Console.WriteLine("2. Boshqa amal bajarmayman");
-                        int amal = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        if (amal == 1)
-                        {
-                            continue;
-                        }
-                        else if (amal == 2)
-                        {
-                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                            break;
-                        }
+                        Console.WriteLine("Xizmatdan foydalanish uchun rahmat !");
+                        break;
                     }
-                    else if (order == "book3")
-                    {
-                        Console.WriteLine(book3);
-                        Console.WriteLine("Kitob soni: ");
-                        int numb = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        Console.Write("Manzilingizni kiriting: ");
-                        string manzil = Console.ReadLine();
-                        Console.Clear();
-                        Console.WriteLine($"Sizning {numb} ta {book3} kitobingiz 2-3 kun ichida yetkazib beriladi.");
-                        Console.WriteLine();
-                        Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
-                        Console.WriteLine();
-                        Console.WriteLine("1. Ortga qaytish");
-                        Console.WriteLine("2. Boshqa amal bajarmayman");
-                        int amal = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        if (amal == 1)
-                        {
-                            continue;
-                        }
-                        else if (amal == 2)
-                        {
-                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                            break;
-                        }
-                    }
-                    else if (order == "book4")
-                    {
-                        Console.WriteLine(book4);
-                        Console.WriteLine("Kitob soni: ");
-                        int numb = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        Console.Write("Manzilingizni kiriting: ");
-                        string manzil = Console.ReadLine();
-                        Console.Clear();
-                        Console.WriteLine($"Sizning {numb} ta {book4} kitobingiz 2-3 kun ichida yetkazib beriladi.");
-                        Console.WriteLine();
-                        Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
-                        Console.WriteLine();
-                        Console.WriteLine("1. Ortga qaytish");
-                        Console.WriteLine("2. Boshqa amal bajarmayman");
-                        int amal = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        if (amal == 1)
-                        {
-                            continue;
-                        }
-                        else if (amal == 2)
-                        {
-                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                            break;
-                        }
-                    }
-                    else if (order == "book5")
-                    {
-                        Console.WriteLine(book5);
-                        Console.WriteLine("Kitob soni: ");
-                        int numb = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        Console.Write("Manzilingizni kiriting: ");
-                        string manzil = Console.ReadLine();
-                        Console.Clear();
-                        Console.WriteLine($"Sizning {numb} ta {book5} kitobingiz 2-3 kun ichida yetkazib beriladi.");
-                        Console.WriteLine();
-                        Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
-                        Console.WriteLine();
-                        Console.WriteLine("1. Ortga qaytish");
-                        Console.WriteLine("2. Boshqa amal bajarmayman");
-                        int amal = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        if (amal == 1)
-                        {
-                            continue;
-                        }
-                        else if (amal == 2)
-                        {
-                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                            break;
-                        }
-                    }
-                    else if (order == "book6")
-                    {
-                        Console.WriteLine(book6);
-                        Console.WriteLine("Kitob soni: ");
-                        int numb = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        Console.Write("Manzilingizni kiriting: ");
-                        string manzil = Console.ReadLine();
-                        Console.Clear();
-                        Console.WriteLine($"Sizning {numb} ta {book6} kitobingiz 2-3 kun ichida yetkazib beriladi.");
-                        Console.WriteLine();
-                        Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
-                        Console.WriteLine();
-                        Console.WriteLine("1. Ortga qaytish");
-                        Console.WriteLine("2. Boshqa amal bajarmayman");
-                        int amal = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        if (amal == 1)
-                        {
-                            continue;
-                        }
-                        else if (amal == 2)
-                        {
-                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                            break;
-                        }
-                    }
-                }
-                else if (bolim == 2)
-                {
-                    Console.Write("Kitob nomini kiriting: ");
-                    string kitob2 = Console.ReadLine();
-                    Console.Clear();
-                    Console.Write("Kitob muallifini kiriting: ");
-                    string kitob2author = Console.ReadLine();
-                    Console.Clear();
-                    Console.Write("Kitobga yangi id kiriting: ");
-                    int kitob2id = int.Parse(Console.ReadLine());
-                    Console.Clear();
-                    Console.Write("Kitob sahifasini kiriting: ");
-                    int kitob2page = int.Parse(Console.ReadLine());
-                    Console.Clear();
-                    Console.Write("Kitobga narx kiriting: ");
-                    int kitob2price = int.Parse(Console.ReadLine());
-                    Console.Clear();
-                    Console.Write("Kitob tili: ");
-                    string kitob2language = Console.ReadLine();
-                    Console.Clear();
-                    Console.Write("Kitob nashr yili: ");
-                    int kitob2year = int.Parse(Console.ReadLine());
-                    Console.Clear();
-                    Console.WriteLine($"Nomi:  {kitob2}");
-                    Console.WriteLine($"Authori:  {kitob2author}");
-                    Console.WriteLine($"Id:  {kitob2id}");
-                    Console.WriteLine($"Sahifalar soni:  {kitob2page}");
-                    Console.WriteLine($"Narxi:  {kitob2price}");
-                    Console.WriteLine($"Tili:  {kitob2language}");
-                    Console.WriteLine($"Yili:  {kitob2year}");
-                    Console.WriteLine();
-                    Console.WriteLine("Yangi kitobni qo`shishni tasdiqlaysizmi? ");
-                    Console.WriteLine("1. Ha     2. Yoq ");
-                    int tasdiq = int.Parse(Console.ReadLine());
-                    Console.Clear();
-                    if (tasdiq == 1)
-                    {
-                        Console.WriteLine("Yangi kitob qo`shildi !");
-                        Console.WriteLine();
-                        Console.WriteLine("1. Ortga qaytish");
-                        Console.WriteLine("2. Boshqa amal bajarmayman");
-                        int amal = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        if (amal == 1)
-                        {
-                            continue;
-                        }
-                        else if (amal == 2)
-                        {
-                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                            break;
-                        }
-                    }
-                }
-                if (bolim == 4)
-                {
-                    Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                    break;
 
                 }
-            }
-            if (login != login1 || parol != parol1)
-            {
-                Console.WriteLine("Login yoki parol noto`g`ri !");
-                return;
+                else if (tanlang == 3)
+                {
+                    Console.Write("Yangi telefon raqamini kiriting: +998");
+                    int raqam = int.Parse(Console.ReadLine());
+                    number = raqam;
+                    Console.WriteLine($"{number} ga Sms xabarnoma ulandi");
+                    Console.WriteLine("Boshqa amal bajarasizmi ?    1-Ha.  2-Yoq ");
+                    int amal = int.Parse(Console.ReadLine());
+                    if (amal == 1)
+                    {
+                        Console.Clear();
+                        continue;
+                    }
+                    else if (amal == 2)
+                    {
+                        Console.WriteLine("Xizmatdan foydalanish uchun rahmat !");
+                        break;
+                    }
+
+                }
+                else if (tanlang == 4)
+                {
+                    Console.WriteLine("Yangi parol kiriting: ");
+                    int kod2 = int.Parse(Console.ReadLine());
+                    Console.Clear();
+                    kod = kod2;
+                    Console.WriteLine("Karta kodini o`zgartirish muvaffaqiyatli amalga oshirildi");
+                    Console.WriteLine();
+                    Console.WriteLine("Boshqa amal bajarasizmi ?   1-Ha.  2-Yoq ");
+                    int amal = int.Parse(Console.ReadLine());
+                    if (amal == 1)
+                    {
+                        Console.Clear();
+                        continue;
+                    }
+                    else if (amal == 2)
+                    {
+                        Console.WriteLine("Xizmatdan foydalanish uchun rahmat !");
+                        break;
+                    }
+                }
+                else if (tanlang == 5)
+                {
+                    Console.WriteLine("1. $ -> SUM");
+                    Console.WriteLine("2. SUM -> $");
+                    int valyuta = int.Parse(Console.ReadLine());
+                    if (valyuta == 1)
+                    {
+                        Console.WriteLine("$ miqdorini kiriting: ");
+                        double dollar = double.Parse(Console.ReadLine());
+                        double sum = dollar * 12950;
+                        Console.WriteLine($"Marxamat pulingnizni olishingiz mumkin ( {sum} )");
+                        Console.WriteLine();
+                        Console.WriteLine("Boshqa amal bajarasizmi ?   1-Ha.  2-Yoq ");
+                        int amal = int.Parse(Console.ReadLine());
+                        if (amal == 1)
+                        {
+                            Console.Clear();
+                            continue;
+                        }
+                        else if (amal == 2)
+                        {
+                            Console.WriteLine("Xizmatdan foydalanish uchun rahmat !");
+                            break;
+                        }
+                    }
+                    else if (valyuta == 2)
+                    {
+                        Console.WriteLine("SUM miqdorini kiriting: ");
+                        double sum = double.Parse(Console.ReadLine());
+                        double dollar = sum / 12950;
+                        Console.WriteLine($"Marxamat pulingnizni olishingiz mumkin ( {dollar} $)");
+                        Console.WriteLine();
+                        Console.WriteLine("Boshqa amal bajarasizmi ?   1-Ha.  2-Yoq ");
+                        int amal = int.Parse(Console.ReadLine());
+                        if (amal == 1)
+                        {
+                            Console.Clear();
+                            continue;
+                        }
+                        else if (amal == 2)
+                        {
+                            Console.WriteLine("Xizmatdan foydalanish uchun rahmat !");
+                            break;
+                        }
+                    }
+                }
+                else if (tanlang == 6)
+                {
+                    Console.WriteLine("Xizmatdan foydalanish uchun rahmat !");
+                    break;
+                }
+
             }
         }
-        else if (a == 2)
+        else if (kod != kod1)
         {
-
-            Console.Write("New Login: ");
-            string login2 = Console.ReadLine();
-            Console.Write("New Parol: ");
-            string parol2 = Console.ReadLine();
-            Console.WriteLine("Ro'yxatdan o'tdingiz !");
+            Console.WriteLine("Kod noto`g`ri kiritildi");
             Console.WriteLine();
-            Console.WriteLine("Tizimga kirish uchun login va parolni kiriting: ");
-            Console.Write("Login: ");
-            string login = Console.ReadLine();
-            Console.Write("Parol: ");
-            string parol = Console.ReadLine();
-            Console.Clear();
-            while (login == login2 && parol == parol2)
-            {
+            Console.WriteLine("Qaytadan urinib ko`ring");
+            Console.WriteLine();
+            Console.WriteLine();
 
-                Console.Clear();
-                Console.WriteLine("Tizimga hush kelibsiz !");
-                Console.WriteLine("Bolimni tanlang...");
-                Console.WriteLine("1. Kitob buyurtma qilish");
-                Console.WriteLine("2. Kitob qo`shish");
-                Console.WriteLine("3. Kitoblar haqida malumot");
-                Console.WriteLine("4. Chiqish");
-                int bolim = int.Parse(Console.ReadLine());
-                Console.Clear();
-                if (bolim == 3)
-                {
-                    Console.WriteLine("Book1 = A Dictionary of the English Language");
-                    Console.WriteLine("Book2 = Ducks, Newburyport");
-                    Console.WriteLine("Book3 = 2666");
-                    Console.WriteLine("Book4 = The Count of Monte Cristo");
-                    Console.WriteLine("Book5 = Harry Potter and the Philosopher's Stone");
-                    Console.WriteLine("Book6 = And then There Were None");
-                    Console.Write("Batafsil ma'lumor olish uchun Tanlang: ");
-                    string choice = Console.ReadLine();
-                    Console.Clear();
-                    if (choice == "Book1")
-                    {
-                        Console.WriteLine("              A Dictionary of the English Language");
-                        Console.WriteLine("Language -> English");
-                        Console.WriteLine("Author -> Samuel Johnson");
-                        Console.WriteLine("Pages -> 2348");
-                        Console.WriteLine("Year -> 1755");
-                        Console.WriteLine("Price -> 30$");
-                        Console.WriteLine();
-                        Console.WriteLine("1. Ortga qaytish");
-                        Console.WriteLine("2. Boshqa amal bajarmayman");
-                        int amal = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        if (amal == 1)
-                        {
-                            continue;
-                        }
-                        else if (amal == 2)
-                        {
-                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                            break;
-                        }
-                    }
-                    else if (choice == "Book2")
-                    {
-                        Console.WriteLine("              Ducks, Newburyport");
-                        Console.WriteLine("Language -> English");
-                        Console.WriteLine("Author -> Lucy Ellmann");
-                        Console.WriteLine("Pages -> 1030");
-                        Console.WriteLine("Year -> 2019");
-                        Console.WriteLine("Price -> 20$");
-                        Console.WriteLine();
-                        Console.WriteLine("1. Ortga qaytish");
-                        Console.WriteLine("2. Boshqa amal bajarmayman");
-                        int amal = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        if (amal == 1)
-                        {
-                            continue;
-                        }
-                        else if (amal == 2)
-                        {
-                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                            break;
-                        }
-                    }
-                    else if (choice == "Book3")
-                    {
-                        Console.WriteLine("              2666");
-                        Console.WriteLine("Language -> English");
-                        Console.WriteLine("Author -> Roberto Bolano");
-                        Console.WriteLine("Pages -> 1100");
-                        Console.WriteLine("Year -> 2004");
-                        Console.WriteLine("Price -> 25$");
-                        Console.WriteLine();
-                        Console.WriteLine("1. Ortga qaytish");
-                        Console.WriteLine("2. Boshqa amal bajarmayman");
-                        int amal = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        if (amal == 1)
-                        {
-                            continue;
-                        }
-                        else if (amal == 2)
-                        {
-                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                            break;
-                        }
-                    }
-                    else if (choice == "Book4")
-                    {
-                        Console.WriteLine("              The Count of Monte Cristo");
-                        Console.WriteLine("Language -> English");
-                        Console.WriteLine("Author -> Alexandre Dumas");
-                        Console.WriteLine("Pages -> 1276");
-                        Console.WriteLine("Year -> 1844");
-                        Console.WriteLine("Price -> 15$");
-                        Console.WriteLine();
-                        Console.WriteLine("1. Ortga qaytish");
-                        Console.WriteLine("2. Boshqa amal bajarmayman");
-                        int amal = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        if (amal == 1)
-                        {
-                            continue;
-                        }
-                        else if (amal == 2)
-                        {
-                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                            break;
-                        }
-                    }
-                    else if (choice == "Book5")
-                    {
-                        Console.WriteLine("              Harry Potter and the Philosopher's Stone");
-                        Console.WriteLine("Language -> English");
-                        Console.WriteLine("Author -> J.K. Rowling");
-                        Console.WriteLine("Pages -> 223");
-                        Console.WriteLine("Year -> 1997");
-                        Console.WriteLine("Price -> 10$");
-                        Console.WriteLine();
-                        Console.WriteLine("1. Ortga qaytish");
-                        Console.WriteLine("2. Boshqa amal bajarmayman");
-                        int amal = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        if (amal == 1)
-                        {
-                            continue;
-                        }
-                        else if (amal == 2)
-                        {
-                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                            break;
-                        }
-                    }
-                    else if (choice == "Book6")
-                    {
-                        Console.WriteLine("              And then There Were None");
-                        Console.WriteLine("Language -> English");
-                        Console.WriteLine("Author -> Agatha Christie");
-                        Console.WriteLine("Pages -> 272");
-                        Console.WriteLine("Year -> 1939");
-                        Console.WriteLine("Price -> 10$");
-                        Console.WriteLine();
-                        Console.WriteLine("1. Ortga qaytish");
-                        Console.WriteLine("2. Boshqa amal bajarmayman");
-                        int amal = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        if (amal == 1)
-                        {
-                            continue;
-                        }
-                        else if (amal == 2)
-                        {
-                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                            break;
-                        }
-                    }
-                }
-                else if (bolim == 1)
-                {
-                    Console.Write("Qaysi kitobdan buyurtma bermoqchisiz ( Masalan -> book1 ) : ");
-                    string order = Console.ReadLine();
-                    if (order == "book1")
-                    {
-                        Console.WriteLine(book1);
-                        Console.WriteLine("Kitob soni: ");
-                        int numb = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        Console.Write("Manzilingizni kiriting: ");
-                        string manzil = Console.ReadLine();
-                        Console.Clear();
-                        Console.WriteLine($"Sizning {numb} ta {book1} kitobingiz 2-3 kun ichida yetkazib beriladi.");
-                        Console.WriteLine();
-                        Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
-                        Console.WriteLine();
-                        Console.WriteLine("1. Ortga qaytish");
-                        Console.WriteLine("2. Boshqa amal bajarmayman");
-                        int amal = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        if (amal == 1)
-                        {
-                            continue;
-                        }
-                        else if (amal == 2)
-                        {
-                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                            break;
-                        }
-                    }
-                    else if (order == "book2")
-                    {
-                        Console.WriteLine(book2);
-                        Console.WriteLine("Kitob soni: ");
-                        int numb = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        Console.Write("Manzilingizni kiriting: ");
-                        string manzil = Console.ReadLine();
-                        Console.Clear();
-                        Console.WriteLine($"Sizning {numb} ta {book2} kitobingiz 2-3 kun ichida yetkazib beriladi.");
-                        Console.WriteLine();
-                        Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
-                        Console.WriteLine();
-                        Console.WriteLine("1. Ortga qaytish");
-                        Console.WriteLine("2. Boshqa amal bajarmayman");
-                        int amal = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        if (amal == 1)
-                        {
-                            continue;
-                        }
-                        else if (amal == 2)
-                        {
-                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                            break;
-                        }
-                    }
-                    else if (order == "book3")
-                    {
-                        Console.WriteLine(book3);
-                        Console.WriteLine("Kitob soni: ");
-                        int numb = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        Console.Write("Manzilingizni kiriting: ");
-                        string manzil = Console.ReadLine();
-                        Console.Clear();
-                        Console.WriteLine($"Sizning {numb} ta {book3} kitobingiz 2-3 kun ichida yetkazib beriladi.");
-                        Console.WriteLine();
-                        Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
-                        Console.WriteLine();
-                        Console.WriteLine("1. Ortga qaytish");
-                        Console.WriteLine("2. Boshqa amal bajarmayman");
-                        int amal = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        if (amal == 1)
-                        {
-                            continue;
-                        }
-                        else if (amal == 2)
-                        {
-                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                            break;
-                        }
-                    }
-                    else if (order == "book4")
-                    {
-                        Console.WriteLine(book4);
-                        Console.WriteLine("Kitob soni: ");
-                        int numb = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        Console.Write("Manzilingizni kiriting: ");
-                        string manzil = Console.ReadLine();
-                        Console.Clear();
-                        Console.WriteLine($"Sizning {numb} ta {book4} kitobingiz 2-3 kun ichida yetkazib beriladi.");
-                        Console.WriteLine();
-                        Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
-                        Console.WriteLine();
-                        Console.WriteLine("1. Ortga qaytish");
-                        Console.WriteLine("2. Boshqa amal bajarmayman");
-                        int amal = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        if (amal == 1)
-                        {
-                            continue;
-                        }
-                        else if (amal == 2)
-                        {
-                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                            break;
-                        }
-                    }
-                    else if (order == "book5")
-                    {
-                        Console.WriteLine(book5);
-                        Console.WriteLine("Kitob soni: ");
-                        int numb = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        Console.Write("Manzilingizni kiriting: ");
-                        string manzil = Console.ReadLine();
-                        Console.Clear();
-                        Console.WriteLine($"Sizning {numb} ta {book5} kitobingiz 2-3 kun ichida yetkazib beriladi.");
-                        Console.WriteLine();
-                        Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
-                        Console.WriteLine();
-                        Console.WriteLine("1. Ortga qaytish");
-                        Console.WriteLine("2. Boshqa amal bajarmayman");
-                        int amal = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        if (amal == 1)
-                        {
-                            continue;
-                        }
-                        else if (amal == 2)
-                        {
-                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                            break;
-                        }
-                    }
-                    else if (order == "book6")
-                    {
-                        Console.WriteLine(book6);
-                        Console.WriteLine("Kitob soni: ");
-                        int numb = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        Console.Write("Manzilingizni kiriting: ");
-                        string manzil = Console.ReadLine();
-                        Console.Clear();
-                        Console.WriteLine($"Sizning {numb} ta {book6} kitobingiz 2-3 kun ichida yetkazib beriladi.");
-                        Console.WriteLine();
-                        Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
-                        Console.WriteLine();
-                        Console.WriteLine("1. Ortga qaytish");
-                        Console.WriteLine("2. Boshqa amal bajarmayman");
-                        int amal = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        if (amal == 1)
-                        {
-                            continue;
-                        }
-                        else if (amal == 2)
-                        {
-                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                            break;
-                        }
-                    }
-                }
-                else if (bolim == 2)
-                {
-                    Console.Write("Kitob nomini kiriting: ");
-                    string kitob2 = Console.ReadLine();
-                    Console.Clear();
-                    Console.Write("Kitob muallifini kiriting: ");
-                    string kitob2author = Console.ReadLine();
-                    Console.Clear();
-                    Console.Write("Kitobga yangi id kiriting: ");
-                    int kitob2id = int.Parse(Console.ReadLine());
-                    Console.Clear();
-                    Console.Write("Kitob sahifasini kiriting: ");
-                    int kitob2page = int.Parse(Console.ReadLine());
-                    Console.Clear();
-                    Console.Write("Kitobga narx kiriting: ");
-                    int kitob2price = int.Parse(Console.ReadLine());
-                    Console.Clear();
-                    Console.Write("Kitob tili: ");
-                    string kitob2language = Console.ReadLine();
-                    Console.Clear();
-                    Console.Write("Kitob nashr yili: ");
-                    int kitob2year = int.Parse(Console.ReadLine());
-                    Console.Clear();
-                    Console.WriteLine($"Nomi:  {kitob2}");
-                    Console.WriteLine($"Authori:  {kitob2author}");
-                    Console.WriteLine($"Id:  {kitob2id}");
-                    Console.WriteLine($"Sahifalar soni:  {kitob2page}");
-                    Console.WriteLine($"Narxi:  {kitob2price}");
-                    Console.WriteLine($"Tili:  {kitob2language}");
-                    Console.WriteLine($"Yili:  {kitob2year}");
-                    Console.WriteLine();
-                    Console.WriteLine("Yangi kitobni qo`shishni tasdiqlaysizmi? ");
-                    Console.WriteLine("1. Ha     2. Yoq ");
-                    int tasdiq = int.Parse(Console.ReadLine());
-                    Console.Clear();
-                    if (tasdiq == 1)
-                    {
-                        Console.WriteLine("Yangi kitob qo`shildi !");
-                        Console.WriteLine();
-                        Console.WriteLine("1. Ortga qaytish");
-                        Console.WriteLine("2. Boshqa amal bajarmayman");
-                        int amal = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        if (amal == 1)
-                        {
-                            continue;
-                        }
-                        else if (amal == 2)
-                        {
-                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                            break;
-                        }
-                    }
-                }
-                else if (bolim == 4)
-                {
-                    Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                    break;
-
-                }
-                if (login != login2 || parol != parol2)
-                {
-                    Console.WriteLine("Login yoki parol noto`g`ri !");
-                    Console.WriteLine("Boshqatdan urunib ko`ring. ");
-                }
-
-            }
         }
+
     }
 }

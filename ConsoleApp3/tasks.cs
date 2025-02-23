@@ -80,6 +80,45 @@ namespace ConsoleApp3
             Console.WriteLine(false);
 
         }
+        public void task33(int a)
+        {
+            if (1000 <= a && a <= 9999 || -9999 <= a && a <= -1000)
+            {
+                int ming = a / 1000;
+                int yuz = a % 1000 / 100;
+                int on = a % 1000 % 100 / 10;
+                int bir = a % 1000 % 100 % 10 / 1;
+                if (ming == yuz || ming == on || ming == bir || yuz == on || yuz == bir || on == bir)
+                {
+                    Console.WriteLine(true);
+                }
+                else
+                {
+                    Console.WriteLine(false);
+                }
+            }
+            Console.WriteLine(false);
+        }
+        public void task34(int a)
+        {
+            if (1000 <= a && a <= 9999 || -9999 <= a && a <= -1000)
+            {
+                int ming = a / 1000;
+                int yuz = a % 1000 / 100;
+                int on = a % 1000 % 100 / 10;
+                int bir = a % 1000 % 100 % 10 / 1;
+                if (ming == 1 || yuz == 1 || on == 1 || bir == 1)
+                {
+                    Console.WriteLine(true);
+                }
+                else
+                {
+                    Console.WriteLine(false);
+                }
+            }
+            Console.WriteLine(false);
+        }
 
     }
+
 }
