@@ -14,6 +14,8 @@ class Program
         string book5 = "Harry Potter and the Philosopher's Stone";
         string book6 = "And then There Were None";
         Console.WriteLine("                                      ONLINE KUTUBXONAGA HUSH KELIBSIZ");
+        Console.WriteLine("Oldin royxatdan o`tganmisiz?");
+        Console.WriteLine();
         Console.WriteLine("1. Tizimga kirish");
         Console.WriteLine("2. Ro'yxatdan o'tish");
         int a = int.Parse(Console.ReadLine());
@@ -740,7 +742,6 @@ class Program
                         Console.WriteLine(book6);
                         Console.WriteLine("Kitob soni: ");
                         int numb = int.Parse(Console.ReadLine());
-                        Console.Beep(100, 500);
                         Console.Clear();
                         Console.Write("Manzilingizni kiriting: ");
                         string manzil = Console.ReadLine();
@@ -827,6 +828,7 @@ class Program
                 if (login != login2 || parol != parol2)
                 {
                     Console.WriteLine("Login yoki parol noto`g`ri !");
+                    Console.WriteLine("Boshqatdan urunib ko`ring. ");
                 }
 
             }
