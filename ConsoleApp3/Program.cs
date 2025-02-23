@@ -5,20 +5,23 @@ public class Program
     static void Main(string[] args)
     {
 
-        string[] arguments = { "Sardor", "Muhammadbek", "Aziz" };
-        string[] arguments2 = { "150$", "250$", "350.000$ (For Porsche GT3 RS)" };
-        Main2(arguments, arguments2);
-
-    }
 
 
-    public static void Main2(string[] names, string[] arguments2)
-    {
-        int res = 0;
-        foreach (string name in names)
+        int[][] jaggedArray = new int[3][];
+
+
+        jaggedArray[0] = new int[] { 1, 2, 3 };
+        jaggedArray[1] = new int[] { 4, 5 };
+        jaggedArray[2] = new int[] { 6, 7, 8, 9 };
+
+
+        for (int i = 0; i < jaggedArray.Length; i++)
         {
-            Console.WriteLine(name + " " + arguments2[res]);
-            res++;
+            for (int j = 0; j < jaggedArray[i].Length; j++)
+            {
+                Console.Write(jaggedArray[i][j] + " ");
+            }
+            Console.WriteLine();
         }
     }
 }
