@@ -30,11 +30,11 @@ class Program
 
         if (found)
         {
-            Console.WriteLine(target + " jagged array ichida mavjud.");
+            Console.WriteLine(target + " jagged array ichida mavjud  .");
         }
         else
         {
-            Console.WriteLine(target + " jagged array ichida mavjud emas.");
+            Console.WriteLine(target + " jagged array ichida mavjud emas  .");
         }
     }
 }
