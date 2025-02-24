@@ -195,5 +195,8 @@ namespace ConsoleApp3
             }
            Console.Write($"{result} ");
         }
+
     }
 }
+ 
+Console.WriteLine("Salom, Dunyoooooo")
